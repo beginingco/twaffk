@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} {% endblock %}</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet"
+        href="{{url_for('static', filename='fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+    <style>
+       
+
+        *,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        input {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .list-selection-buttons {
+            background-color: lightgray;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin: 10px 0;
+
+            transition: ease-in;
+            transition: background-color .7s;
+
+        }
+
+        .list-selection-buttons>a {
+            text-decoration: none;
+            color: black;
+            transition: color .5s;
+        }
+
+        .list-selection-buttons:hover>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .list-selection-buttons:hover {
+            background-color: black;
+        }
+
+        textarea {
+            margin: 0px;
+            height: 308px;
+            /* width: 278px; */
+            display: flex;
+            flex: 1;
+            width: -webkit-fill-available;
+            border: 0.5px #222222 solid;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .sub-btn {
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Cairo';
+        }
+
+        .goHome {
+            color: white;
+            font-weight: bold;
+            background-color: black;
+            padding: 13px;
+            /* border-radius: 12px; */
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="main">
+        {% block body %} {% endblock %}
+    </div>
+
+    <!-- JS -->
+    <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
